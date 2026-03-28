@@ -1,6 +1,7 @@
-name: schedule job
+name: schedule jobs
 
 on:
+  workflow_dispatch: 
   schedule:
     - cron: "0 0 * * *"
 
@@ -10,4 +11,4 @@ jobs:
 
     steps:
       - name: print message
-      run: echo "schedule workflow executed"
+        run: echo "schedule workflow executed"
