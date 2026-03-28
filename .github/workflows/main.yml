@@ -1,7 +1,8 @@
-name: schedule jobs
+name: schedule-jobs
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: {}
+
   schedule:
     - cron: "0 0 * * *"
 
@@ -10,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: print message
+      - name: Print message
         run: echo "schedule workflow executed"
