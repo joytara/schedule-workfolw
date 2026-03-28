@@ -1,15 +1,15 @@
-name: schedule-jobs
+name: my-first-workflow
 
-on:
-  workflow_dispatch: {}
-
+on: 
+  workflow_dispatch: 
   schedule:
-    - cron: "0 0 * * *"
+  # Runs daily at 00:00 UTC
+  - cron: "0 0 * * *"
 
 jobs:
-  run-script:
+  test-job:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print message
-        run: echo "schedule workflow executed"
+      - name: hello world
+        run: echo "hello world"
